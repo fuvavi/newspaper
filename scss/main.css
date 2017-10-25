@@ -266,6 +266,12 @@ img {
       .fv-mainnav .main-nav ul li.menu-item-has-children > a {
         padding-right: 40px; }
       .fv-mainnav .main-nav ul li.menu-item-has-children ul {
+        -webkit-box-shadow: 2px 3px 9px #b9b9b9;
+        -khtml-box-shadow: 2px 3px 9px #b9b9b9;
+        -moz-box-shadow: 2px 3px 9px #b9b9b9;
+        -ms-box-shadow: 2px 3px 9px #b9b9b9;
+        -o-box-shadow: 2px 3px 9px #b9b9b9;
+        box-shadow: 2px 3px 9px #b9b9b9;
         position: absolute;
         z-index: 1;
         min-width: 200px;
@@ -284,17 +290,20 @@ img {
           width: 100%;
           line-height: 25px; }
           .fv-mainnav .main-nav ul li.menu-item-has-children ul li a {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 300;
             padding: 5px 15px;
             background-color: #fff;
             border-bottom: 1px solid #57b2e9;
-            white-space: nowrap; }
+            white-space: nowrap;
+            text-transform: inherit; }
             .fv-mainnav .main-nav ul li.menu-item-has-children ul li a:after {
               display: none; }
             .fv-mainnav .main-nav ul li.menu-item-has-children ul li a:hover {
               background-color: #57b2e9;
               color: #fff; }
+          .fv-mainnav .main-nav ul li.menu-item-has-children ul li:last-child a {
+            border-bottom: none; }
       .fv-mainnav .main-nav ul li.menu-item-has-children:hover ul {
         visibility: visible;
         height: auto;
@@ -695,7 +704,7 @@ img {
   color: #999; }
 
 .fv-post-content .post-content-title h1 {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 10px;
   word-wrap: break-word;
   font-size: 30px;
@@ -791,13 +800,8 @@ img {
   color: #57b2e9; }
 .fv-post-content .post-content .f-post-tags {
   text-transform: uppercase;
-  color: #e91a08;
+  color: #57b2e9;
   font-weight: bold; }
-  .fv-post-content .post-content .f-post-tags span {
-    text-transform: uppercase;
-    color: #e91a08;
-    margin-right: 15px;
-    font-weight: bold; }
   .fv-post-content .post-content .f-post-tags a {
     border: 1px solid #949da6;
     color: #10171f;
@@ -850,7 +854,7 @@ img {
   cursor: default; }
 .fv-post-content .f-post-share-bottom span {
   text-transform: uppercase;
-  color: #e91a08;
+  color: #57b2e9;
   margin-right: 15px;
   font-weight: bold; }
 .fv-post-content .f-post-share-bottom .fps-btn {

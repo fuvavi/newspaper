@@ -10,12 +10,20 @@ $red : #f44336;
 $blue : #4db2ec;
 
 @import "mixins.scss";
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 	.fv-header-mb{
 		display: none;
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+	.fv-post-content .post-content-title h1{
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.fv-post-content .post-content h3{
+		font-size: 20px;
+		line-height: 25px;
+	}
 	.fv-header{
 		display: none;
 	}
@@ -144,7 +152,7 @@ $blue : #4db2ec;
 	    z-index: 99;
 	    top: 0;
 	    left: 0;
-	    // background-color: #222;
+	    /*background-color: #222;*/
 		background-repeat: no-repeat;
 		background-size: cover;
 	    overflow-x: hidden;
@@ -259,6 +267,7 @@ $blue : #4db2ec;
 	}
 	.news-post-item .new-post-item-inner .post-avatar img{
 		max-height: 300px;
+		width: 100%;
 	}
 	.fv-content {
 		.feature-news {
@@ -312,9 +321,26 @@ $blue : #4db2ec;
 		width: 100%;
 		padding: 0;
 	}
+	.fv-content .feature-news{
+		margin-left: -15px;
+		margin-right: -15px;
+		width: calc(100% + 30px);
+	}
 }
 
 @media (max-width: 640px) {
+	.fv-post-content .post-content-title .post-sharing .ps-content .fv-social-sharing-buttons{
+		margin-bottom: 10px;
+	}
+	.fv-content .feature-news .fn-post-medium .news-post-item:nth-child(1) .new-post-item-inner .post-content h3,
+	.fv-content .feature-news .fn-post-medium .news-post-item:nth-child(2) .new-post-item-inner .post-content h3, 
+	.fv-content .feature-news .fn-post-medium .news-post-item:nth-child(3) .new-post-item-inner .post-content h3{
+		font-size: 16px;
+	}
+	.fv-post-content .post-content-title h1{
+		font-size: 20px;
+		line-height: 25px;
+	}
 	.category-post-item {
 		.category-post-item-inner {
 			.category-post-content {

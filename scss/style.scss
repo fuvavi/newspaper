@@ -884,7 +884,7 @@ img{
 		}
 		.f-post-tags{
 			text-transform: uppercase;
-			color: $scolor;
+			color: $color-red;
 			font-weight: bold;
 			a{
 				border: 1px solid $text-gray;
@@ -894,6 +894,8 @@ img{
 				font-weight: bold;
 				font-size: 11px;
 				margin-left: 5px;
+				display: inline-block;
+				margin-bottom: 5px;
 				&:hover{
 					color: #fff;
 					background-color: $text-gray;
@@ -968,7 +970,7 @@ img{
 	.f-post-share-bottom{
 		span{
 			text-transform: uppercase;
-			color: $scolor;
+			color: $color-red;
 			margin-right: 15px;
 			font-weight: bold;
 		}
@@ -994,21 +996,69 @@ img{
 			font-family: Verdana,Roboto ,sans-serif;
 		}
 	}
-	.f-post-recently{
-		margin-top: 20px;
-		.nav-pills {
+	.post_related{
+		h3.pr-title{
+			margin-top: 30px;
+			margin-bottom: 20px;
 			border-bottom: 2px solid $color-red;
-			.nav-item .nav-link{
-				border-radius: 0px;
-				text-transform: uppercase;
+			span{
+				background-color: $color-red;
+				padding: 5px 15px 3px 15px;
+				color: #fff;
+				display: inline-block;
 				font-size: 16px;
-				color: $text;
-				font-weight: 500;
+				line-height: 20px;
+				text-transform: uppercase;
 			}
 		}
-		.nav-pills .nav-link.active, .show>.nav-pills .nav-link{
-			background-color: $color-red;
-			color: #fff;
+		.pr-item{
+			margin-bottom: 15px;
+			.pr-item-item-inner{
+				a{
+					text-decoration: none;
+				}
+				.pr-item-content{
+					h3{
+						font-size: 16px;
+						color: $tcolor;
+						margin-top: 10px;
+						&:hover{
+							color: $red;
+						}
+					}
+				}
+			}
+		}
+		.owl-carousel .owl-nav{
+			margin-bottom: 20px;
+		}
+		.owl-carousel .owl-nav .owl-next, 
+		.owl-carousel .owl-nav .owl-prev{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			border: 1px solid #dcdcdc;
+			i{
+				font-size: 12px;
+				line-height: 28px;
+				color: #b7b7b7;
+			}
+			&:hover{
+				background-color: $color-red;
+				border-color: $color-red;
+				i{
+					color: #fff;
+				}
+			}
+			
+		}
+		.owl-carousel .owl-nav .owl-prev{
+			margin-right: 10px;
+		}
+		.owl-carousel .owl-nav .disabled{
+			opacity: 0.5;
+			cursor: not-allowed;
 		}
 	}
 }

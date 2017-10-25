@@ -6,7 +6,7 @@
     		<div class="fn-post-large">
 				<div class="news-post-item">
 					<div class="new-post-item-inner">
-						<a href="#">
+						<a href="/single.php">
 							<div class="post-avatar">
 								<img src="images/large.jpg"  alt="News">
 							</div>
@@ -557,14 +557,14 @@
 						<div class="sidebar-item mgb-20">
 							<div class="text-center">
 								<a href="#">
-									<img src="images/banner-ad.jpg" alt="">
+									<img src="images/banner-qc.jpg" alt="">
 								</a>
 							</div>
 						</div>
 						<div class="sidebar-item mgb-20">
 							<div class="text-center">
 								<a href="#">
-									<img src="images/banner-ad.jpg" alt="">
+									<img src="images/banner-qc.jpg" alt="">
 								</a>
 							</div>
 						</div>

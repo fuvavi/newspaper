@@ -1,7 +1,7 @@
-$('.owlcarousel').owlCarousel({
+$('#post_related_slide').owlCarousel({
     loop:false,
-    margin:15,
-    nav:false,
+    margin:20,
+    nav:true,
     dots: false,
     responsive:{
         0:{
@@ -11,7 +11,7 @@ $('.owlcarousel').owlCarousel({
             items:2
         },
         1000:{
-            items:4
+            items:3
         }
     },
     navText: ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"]

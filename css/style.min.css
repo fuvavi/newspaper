@@ -800,7 +800,7 @@ img {
   color: #57b2e9; }
 .fv-post-content .post-content .f-post-tags {
   text-transform: uppercase;
-  color: #57b2e9;
+  color: #e91a08;
   font-weight: bold; }
   .fv-post-content .post-content .f-post-tags a {
     border: 1px solid #949da6;
@@ -809,7 +809,9 @@ img {
     padding: 3px 8px;
     font-weight: bold;
     font-size: 11px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    display: inline-block;
+    margin-bottom: 5px; }
     .fv-post-content .post-content .f-post-tags a:hover {
       color: #fff;
       background-color: #949da6; }
@@ -870,19 +872,54 @@ img {
   background-color: #eb4026; }
 .fv-post-content .post-content h1, .fv-post-content .post-content h2, .fv-post-content .post-content h3, .fv-post-content .post-content h4, .fv-post-content .post-content h5, .fv-post-content .post-content h6, .fv-post-content .post-content span, .fv-post-content .post-content strong, .fv-post-content .post-content a, .fv-post-content .post-content div {
   font-family: Verdana,Roboto ,sans-serif; }
-.fv-post-content .f-post-recently {
-  margin-top: 20px; }
-  .fv-post-content .f-post-recently .nav-pills {
-    border-bottom: 2px solid #e91a08; }
-    .fv-post-content .f-post-recently .nav-pills .nav-item .nav-link {
-      border-radius: 0px;
-      text-transform: uppercase;
-      font-size: 16px;
-      color: #10171f;
-      font-weight: 500; }
-  .fv-post-content .f-post-recently .nav-pills .nav-link.active, .fv-post-content .f-post-recently .show > .nav-pills .nav-link {
+.fv-post-content .post_related h3.pr-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e91a08; }
+  .fv-post-content .post_related h3.pr-title span {
     background-color: #e91a08;
-    color: #fff; }
+    padding: 5px 15px 3px 15px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase; }
+.fv-post-content .post_related .pr-item {
+  margin-bottom: 15px; }
+  .fv-post-content .post_related .pr-item .pr-item-item-inner a {
+    text-decoration: none; }
+  .fv-post-content .post_related .pr-item .pr-item-item-inner .pr-item-content h3 {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px; }
+    .fv-post-content .post_related .pr-item .pr-item-item-inner .pr-item-content h3:hover {
+      color: #f44336; }
+.fv-post-content .post_related .owl-carousel .owl-nav {
+  margin-bottom: 20px; }
+.fv-post-content .post_related .owl-carousel .owl-nav .owl-next,
+.fv-post-content .post_related .owl-carousel .owl-nav .owl-prev {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #dcdcdc; }
+  .fv-post-content .post_related .owl-carousel .owl-nav .owl-next i,
+  .fv-post-content .post_related .owl-carousel .owl-nav .owl-prev i {
+    font-size: 12px;
+    line-height: 28px;
+    color: #b7b7b7; }
+  .fv-post-content .post_related .owl-carousel .owl-nav .owl-next:hover,
+  .fv-post-content .post_related .owl-carousel .owl-nav .owl-prev:hover {
+    background-color: #e91a08;
+    border-color: #e91a08; }
+    .fv-post-content .post_related .owl-carousel .owl-nav .owl-next:hover i,
+    .fv-post-content .post_related .owl-carousel .owl-nav .owl-prev:hover i {
+      color: #fff; }
+.fv-post-content .post_related .owl-carousel .owl-nav .owl-prev {
+  margin-right: 10px; }
+.fv-post-content .post_related .owl-carousel .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: not-allowed; }
 
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
@@ -965,10 +1002,18 @@ img {
 /*///////////////////////////////////ANIMATION//////////////////////////////////*/
 /*/////////////////////////////////////SCREEN////////////////////////////////////////*/
 /*/////////////////////////////////////DIV////////////////////////////////////////*/
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .fv-header-mb {
     display: none; } }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .fv-post-content .post-content-title h1 {
+    font-size: 25px;
+    line-height: 30px; }
+
+  .fv-post-content .post-content h3 {
+    font-size: 20px;
+    line-height: 25px; }
+
   .fv-header {
     display: none; }
 
@@ -1094,6 +1139,7 @@ img {
     z-index: 99;
     top: 0;
     left: 0;
+    /*background-color: #222;*/
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -1204,7 +1250,8 @@ img {
       width: 100%; }
 
   .news-post-item .new-post-item-inner .post-avatar img {
-    max-height: 300px; }
+    max-height: 300px;
+    width: 100%; }
 
   .fv-content .feature-news .fn-post-large {
     margin-bottom: 5px;
@@ -1234,8 +1281,25 @@ img {
   .fv-content .feature-news .fn-post-large,
   .fv-content .feature-news .fn-post-medium {
     width: 100%;
-    padding: 0; } }
+    padding: 0; }
+
+  .fv-content .feature-news {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px); } }
 @media (max-width: 640px) {
+  .fv-post-content .post-content-title .post-sharing .ps-content .fv-social-sharing-buttons {
+    margin-bottom: 10px; }
+
+  .fv-content .feature-news .fn-post-medium .news-post-item:nth-child(1) .new-post-item-inner .post-content h3,
+  .fv-content .feature-news .fn-post-medium .news-post-item:nth-child(2) .new-post-item-inner .post-content h3,
+  .fv-content .feature-news .fn-post-medium .news-post-item:nth-child(3) .new-post-item-inner .post-content h3 {
+    font-size: 16px; }
+
+  .fv-post-content .post-content-title h1 {
+    font-size: 20px;
+    line-height: 25px; }
+
   .category-post-item .category-post-item-inner .category-post-content .category-post-title {
     font-size: 16px;
     line-height: 22px;
@@ -1277,5 +1341,3 @@ img {
       font-size: 13px; }
     .category-post-item.category-module-full .category-post-item-inner .category-post-content .category-post-desc {
       display: none; } }
-
-/*# sourceMappingURL=style.min.css.map */
